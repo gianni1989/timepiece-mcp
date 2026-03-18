@@ -23,16 +23,16 @@ Use this MCP when you want to:
 
 ## Example prompts
 
-- `How long did BAU-308 spend in each status?`
-- `Show me the full lifecycle of BAU-278 including how many times it went back into Development`
-- `What is the average cycle time for tickets closed in BAU this sprint?`
-- `Which status is causing the biggest delays in project BAU?`
+- `How long did PROJ-123 spend in each status?`
+- `Show me the full lifecycle of PROJ-456 including how many times it went back into Development`
+- `What is the average cycle time for tickets closed in PROJ this sprint?`
+- `Which status is causing the biggest delays in project PROJ?`
 - `Compare average development time across the team for last sprint`
-- `What is our flow efficiency for BAU this quarter — how much time is active work vs waiting?`
+- `What is our flow efficiency for PROJ this quarter — how much time is active work vs waiting?`
 - `How often do our tickets bounce back into Development from QA?`
-- `Show me all tickets currently in Development for project BAU with how long they've been there`
+- `Show me all tickets currently in Development for project PROJ with how long they've been there`
 - `Has our average cycle time improved over the last four sprints?`
-- `Export a CSV of time-in-status for all tickets resolved in BAU this month`
+- `Export a CSV of time-in-status for all tickets resolved in PROJ this month`
 
 ---
 
@@ -64,10 +64,10 @@ Returns the total time a single Jira issue spent in each workflow status, expres
 | `day_length` | No | `businessDays` | Whether to count `businessDays` or `calendarDays`. |
 
 **Try asking:**
-- `How long did BAU-308 spend in each status?`
-- `Show me the time-in-status breakdown for BAU-278`
-- `How many days was BAU-401 in Development?`
-- `Which status did BAU-308 spend the most time in?`
+- `How long did PROJ-123 spend in each status?`
+- `Show me the time-in-status breakdown for PROJ-456`
+- `How many days was PROJ-789 in Development?`
+- `Which status did PROJ-123 spend the most time in?`
 
 ---
 
@@ -85,10 +85,10 @@ Returns the complete status history of a single issue: visit counts, and minimum
 | `trim_history_end_date` | No | — | Only include transitions on or before this date (`yyyy-MM-dd`). |
 
 **Try asking:**
-- `How many times did BAU-278 cycle back into Development?`
-- `Show me every status transition for BAU-308 with timestamps`
-- `What was the longest single visit to QA Testing for BAU-278?`
-- `Did BAU-401 get sent back from UAT, and how many times?`
+- `How many times did PROJ-456 cycle back into Development?`
+- `Show me every status transition for PROJ-123 with timestamps`
+- `What was the longest single visit to QA Testing for PROJ-456?`
+- `Did PROJ-789 get sent back from UAT, and how many times?`
 
 ---
 
@@ -106,10 +106,10 @@ Retrieves time-in-status for every issue matching a JQL query, returning a matri
 | `page_size` | No | `100` | Number of issues per page (1–1000). |
 
 **Try asking:**
-- `Show me time-in-status for all tickets in the current sprint of project BAU`
-- `Which tickets closed in BAU this month spent the most time in Development?`
-- `Show me all tickets currently in QA Testing for project BAU`
-- `List time-in-status for all tickets assigned to Aaron closed this sprint`
+- `Show me time-in-status for all tickets in the current sprint of project PROJ`
+- `Which tickets closed in PROJ this month spent the most time in Development?`
+- `Show me all tickets currently in QA Testing for project PROJ`
+- `List time-in-status for all tickets assigned to me closed this sprint`
 
 ---
 
@@ -128,10 +128,10 @@ Computes a summary statistic — average, median, sum, or standard deviation —
 | `dbs_metrics` | No | — | JSON string defining lead/cycle time metrics when using `durationBetweenStatuses`. |
 
 **Try asking:**
-- `What is the average cycle time for tickets closed in BAU this sprint?`
-- `Which status has the highest average dwell time in project BAU?`
+- `What is the average cycle time for tickets closed in PROJ this sprint?`
+- `Which status has the highest average dwell time in project PROJ?`
 - `Compare average development time per developer for last sprint`
-- `What is the standard deviation of cycle times in BAU — how consistent are we?`
+- `What is the standard deviation of cycle times in PROJ — how consistent are we?`
 
 ---
 
@@ -179,9 +179,9 @@ Exports a time-in-status report as a CSV or XLSX file for all issues matching a 
 | `columns_by` | No | `statusDuration` | Column grouping for the exported matrix. |
 
 **Try asking:**
-- `Export a CSV of time-in-status for all BAU tickets resolved this month`
+- `Export a CSV of time-in-status for all PROJ tickets resolved this month`
 - `Generate an Excel report of last sprint's cycle times for the sprint review`
-- `Download a spreadsheet of all in-progress BAU tickets with their time in each status`
+- `Download a spreadsheet of all in-progress PROJ tickets with their time in each status`
 
 ---
 
